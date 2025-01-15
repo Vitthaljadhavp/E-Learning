@@ -9,18 +9,22 @@ import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.OneToMany;
-import jakarta.persistence.Table;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 @Entity
-@Table(name = "playlist")
+@Getter
+@Setter
+@NoArgsConstructor
 public class Playlist {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Long id ;
 
-    private String title;
-    private String description;
+    private String title ;
+    private String description ;
     private String thumb;
     private String date;
 
