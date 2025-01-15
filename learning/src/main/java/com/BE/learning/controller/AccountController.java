@@ -16,7 +16,7 @@ public class AccountController {
     private UserService userService;
 
     @GetMapping("/account")
-    public com.BE.learning.entity.User getAccount(@RequestParam Long userId) {
+    public com.BE.learning.entity.User getAccount(@RequestParam String userId) {
         return userService.getUserById(userId);
     }
 

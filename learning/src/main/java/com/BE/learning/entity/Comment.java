@@ -2,6 +2,7 @@ package com.BE.learning.entity;
 
 import org.apache.catalina.User;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -18,7 +19,10 @@ public class Comment {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @Column(name = "comment")
     private String comment;
+
+    @Column(name = "date")
     private String date;
 
     @ManyToOne
@@ -29,6 +33,11 @@ public class Comment {
     @JoinColumn(name = "user_id")
     private User user;
 
+
+    @ManyToOne
+    @JoinColumn(name = "tutor_id", referencedColumnName = "id")
+    private Tutor tutor;
+    
     // Getters and setters
 }
 

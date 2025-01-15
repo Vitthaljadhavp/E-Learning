@@ -1,0 +1,45 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Java MCQ Quiz</title>
+  <link rel="stylesheet" href="sty.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="quiz-container">
+  <div id="start-page">
+    <h2>Welcome to the Java MCQ Quiz!</h2>
+    <label for="studentName">Enter your name: </label>
+    <input type="text" id="studentName" placeholder="Your Name">
+    <button onclick="startQuiz()">Start Quiz</button>
+  </div>
+
+  <div id="quiz" class="question"></div>
+  <div id="options" class="options"></div>
+  <button onclick="nextQuestion()">Next</button>
+  
+  <div id="result"></div>
+
+  <div id="certificate" style="display: none;">
+    <h2>Congratulations, <span id="studentNameDisplay"></span>!</h2>
+    <p>This is to certify that <span id="certificateName"></span> has successfully completed the Java MCQ Quiz.</p>
+    <button onclick="restartQuiz()">Restart Quiz</button>
+  </div>
+
+  <!-- Add this element inside the quiz-container div in your HTML -->
+<div id="retest" style="display: none;">
+    <h2>Retest Required</h2>
+    <p>Your score is below the passing threshold. Please retest to improve your score.</p>
+    <button onclick="restartQuiz()">Retest</button>
+  </div>
+  
+</div>
+
+<script src="quiz.js"></script>
+
+</body>
+</html>

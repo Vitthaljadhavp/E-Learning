@@ -33,7 +33,7 @@ public class ProfileController {
 
     // Get user profile (for User entity)
     @GetMapping("/profiles")
-    public User getProfile(@RequestParam Long userId) {
+    public User getProfile(@RequestParam String userId) {
         return userService.getUserById(userId);
     }
 
